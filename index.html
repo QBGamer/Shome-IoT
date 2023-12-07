@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sidebar Menu</title>
+    
+    
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+<!-- web speak recor api -->
+<div class="container-fluid p-2">
+    <h1 class="text-center py-3">BẢNG ĐIỀU KHIỂN</h1>
+    <div class="px-5">
+        <div class="row gap-3 mt-2">
+            <div data-bs-toggle="modal" data-bs-target="#Weather" class="col card border-3 border-bottom-0 border-start-0 border-end-0 border-primary px-2 py-3">
+                <table>
+                    <tr>
+                        <th rowspan="2" class="fs-3 icons text-center"><i class="bi-cloud-sun-fill"></i></th>
+                        <th>Thời tiết:</th>
+                    </tr>
+                    <tr>
+                        <th>???</th>
+                    </tr>
+                </table>
+            </div>
+            <div data-bs-toggle="modal" data-bs-target="#Temperature" class="col card border-3 border-bottom-0 border-start-0 border-end-0 border-primary px-2 py-3">
+                <table>
+                    <tr>
+                        <th rowspan="2" class="fs-3 icons text-center"><i class="bi-thermometer-half"></i></th>
+                        <th>Nhiệt độ:</th>
+                    </tr>
+                    <tr>
+                        <th>???</th>
+                    </tr>
+                </table>
+            </div>
+            <div data-bs-toggle="modal" data-bs-target="#Humidity" class="col card border-3 border-bottom-0 border-start-0 border-end-0 border-primary px-2 py-3">
+                <table>
+                    <tr>
+                        <th rowspan="2" class="fs-3 icons text-center"><i class="bi-droplet-fill"></i></th>
+                        <th>Độ ẩm:</th>
+                    </tr>
+                    <tr>
+                        <th>???</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row gap-3 mt-2">
+            <div data-bs-toggle="modal" data-bs-target="#Light" class="col card border-3 border-bottom-0 border-start-0 border-end-0 border-primary px-2 py-3">
+                <table>
+                    <tr>
+                        <th rowspan="2" class="fs-3 icons text-center"><i class="bi-brightness-alt-low-fill"></i></th>
+                        <th>Mức sáng:</th>
+                    </tr>
+                    <tr>
+                        <th>???</th>
+                    </tr>
+                </table>
+            </div>
+            <div data-bs-toggle="modal" data-bs-target="#Storge" class="col card border-3 border-bottom-0 border-start-0 border-end-0 border-primary px-2 py-3">
+                <table>
+                    <tr>
+                        <th rowspan="2" class="fs-3 icons text-center"><i class="bi-house-door-fill"></i></th>
+                        <th>Tầng hầm:</th>
+                    </tr>
+                    <tr>
+                        <th>???</th>
+                    </tr>
+                </table>
+            </div>
+            <div data-bs-toggle="modal" data-bs-target="#Water" class="col card border-3 border-bottom-0 border-start-0 border-end-0 border-primary px-2 py-3">
+                <table>
+                    <tr>
+                        <th rowspan="2" class="fs-3 icons text-center"><i class="bi-water"></i></th>
+                        <th>Bồn nước:</th>
+                    </tr>
+                    <tr>
+                        <th>???</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row gap-3 mt-2">
+            <div class="col card border-3 border-bottom-0 border-start-0 border-end-0 border-primary px-2 py-3">
+                <table>
+                    <tr>
+                        <th rowspan="2" class="fs-3 icons text-center"><i class="bi-fire"></i></th>
+                        <th>Khí gas:</th>
+                    </tr>
+                    <tr>
+                        <th>???</th>
+                    </tr>
+                </table>
+            </div>
+            <div data-bs-toggle="modal" data-bs-target="#Warning" class="col card border-3 border-bottom-0 border-start-0 border-end-0 border-primary px-2 py-3">
+                <table>
+                    <tr>
+                        <th rowspan="2" class="fs-3 icons text-center"><i class="bi-exclamation-triangle-fill"></i></th>
+                        <th>Báo động:</th>
+                    </tr>
+                    <tr>
+                        <th>???</th>
+                    </tr>
+                </table>
+            </div>
+            <div data-bs-toggle="modal" data-bs-target="#Other" class="col card border-3 border-bottom-0 border-start-0 border-end-0 border-primary px-2 py-3">
+                <table>
+                    <tr>
+                        <th rowspan="2" class="fs-3 icons text-center"><i class="bi-gear-fill"></i></th>
+                        <th>Thiết bị khác</th>
+                    </tr>
+                    <!-- <tr>
+                        <th>???</th>
+                    </tr> -->
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="Other" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Thiết bị khác</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-check form-switch fs-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="Other_led">
+                <label class="form-check-label" for="Other_led">Đèn</label>
+            </div>
+            <div class="form-check form-switch fs-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="Other_door">
+                <label class="form-check-label" for="Other_door">Cửa</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tắt</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="Temperature" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Nhiệt độ</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-check form-switch fs-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="T_Air">
+                <label class="form-check-label" for="T_Air">Máy lạnh</label>
+            </div>
+            <div class="form-check form-switch fs-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="T_AirAT">
+                <label class="form-check-label" for="T_AirAT">Chế độ tự động</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tắt</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="Humidity" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Độ ẩm</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-check form-switch fs-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="H_Humi">
+                <label class="form-check-label" for="H_Humi">Máy tạo độ ẩm</label>
+            </div>
+            <div class="form-check form-switch fs-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="H_HumiAT">
+                <label class="form-check-label" for="H_HumiAT">Chế độ tự động</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tắt</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="Light" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Mức sáng</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-check form-switch fs-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="Light_led">
+                <label class="form-check-label" for="Light_led">Đèn ngoài</label>
+            </div>
+            <div class="form-check form-switch fs-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="Light_AT">
+                <label class="form-check-label" for="LightAT">Chế độ tự động</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tắt</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="Water" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Bồn nước</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-check form-switch fs-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="Water_AT">
+                <label class="form-check-label" for="Water_AT">Vòi nước</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tắt</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="Warning" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Báo động</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <button class="btn btn-danger" type="button">Tắt báo động</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tắt</button>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>
