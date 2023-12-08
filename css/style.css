@@ -2,6 +2,14 @@ body{
     background-color: rgb(247, 247, 247);
     font-family: Arial, Helvetica, sans-serif;
 }
+.mic{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1em;
+}
 .icons{
     width: 15%;
 }
