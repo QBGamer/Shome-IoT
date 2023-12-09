@@ -654,19 +654,6 @@
         message.destinationName = "Shome_ReciveSecNone";
         client.send(message);
     });
-    const apiKey = '66c747f25a4d5677f91aba38250d5fa5';
-    const city = 'YOUR_CITY';
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-
-    fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-        // Xử lý dữ liệu thời tiết ở đây
-        console.log(data);
-    })
-    .catch(error => {
-        console.error('Error fetching weather data:', error);
-    });
 </script>
 </body>
 </html>
