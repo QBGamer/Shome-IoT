@@ -280,6 +280,45 @@
     </div>
 </div>
 <div class="mic"><button class="micro btn btn-primary fs-1 fw-bold"><i class="bi-mic-fill"></i></button></div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Lịch sử thiết bị</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <table id="dataTable">
+            <thead>
+                <tr>
+                <th>Thời gian</th>
+                <th>Nhiệt độ</th>
+                <th>Độ ẩm</th>
+                <th>Độ sáng</th>
+                <th>Chuyển động</th>
+                <th>Khí gas</th>
+                <th>Báo động</th>
+                <th>Mực nước</th>
+                <th>Máy lạnh</th>
+                <th>Máy lạnh AT</th>
+                <th>Máy độ ẩm</th>
+                <th>Máy độ ẩm AT</th>
+                <th>Đèn ngoài</th>
+                <th>Đèn ngoài AT</th>
+                <th>Cửa</th>
+                <th>Đèn</th>
+                <th>Vòi nước</th>
+                </tr>
+            </thead>
+            <tbody id="logdata"></tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+  </div>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Lịch sử thiết bị
+</button>
 <div class="container bg-light mt-1 mb-5 pb-5 text-center">
     <p class="output">Giọng nói:...</p>
 </div>
@@ -654,6 +693,18 @@
         message.destinationName = "Shome_ReciveSecNone";
         client.send(message);
     });
+    
+    function logdata(){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("logdata").innerHTML = this.responseText;
+        }
+        };
+        xmlhttp.open("GET", "./php/logdata.php", true);
+        xmlhttp.send();
+    }
+    const intervalId = setInterval(logdata, 5000);
 </script>
 </body>
 </html>

@@ -2,6 +2,15 @@ body{
     background-color: rgb(247, 247, 247);
     font-family: Arial, Helvetica, sans-serif;
 }
+#dataTable{
+    width: 100%;
+    border-collapse: collapse;
+}
+#dataTable th, #dataTable td {
+    text-align: center;
+    width: auto; /* hoặc width: 25%; nếu bạn muốn chia thành 4 cột */
+    border: 1px solid;
+}
 .mic{
     position: fixed;
     left: 0;
