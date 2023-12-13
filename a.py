@@ -25,7 +25,7 @@ topics = [
 ]
 # TG temp - humi - light - move -gas - sound -water -air -airAT -humi -humiAT -lightOut -lightAT -door -led - sensor
 #       0   1       2       3   4       5       6       7   8   9       10      11          12      13  14      15
-dataValue=[0,0,0,"no","no","no",0,"no","no","no","no","no","no","no","no","no"]
+dataValue=[0,0,0,"no","no","no",0,"no","yes","no","yes","no","yes","no","no","no"]
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
     for topic in topics:
