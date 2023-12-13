@@ -1,6 +1,6 @@
 <?php
   include("db_con.php");
-  $sql="SELECT * FROM data";
+  $sql="SELECT * FROM data ORDER BY time DESC";
   $result=mysqli_query($conn,$sql);
   foreach($result as $row){
     echo '<tr>

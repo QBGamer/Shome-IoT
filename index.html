@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Sidebar Menu</title>
+    <title>BẢNG ĐIỀU KHIỂN</title>
     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap.css">
@@ -280,11 +280,11 @@
     </div>
 </div>
 <div class="mic"><button class="micro btn btn-primary fs-1 fw-bold"><i class="bi-mic-fill"></i></button></div>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="logs" tabindex="-1" aria-labelledby="logsLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Lịch sử thiết bị</h1>
+          <h1 class="modal-title fs-5" id="logsLabel">Lịch sử thiết bị</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -316,8 +316,33 @@
       </div>
     </div>
   </div>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <div class="modal fade" id="voicecmd" tabindex="-1" aria-labelledby="logsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="logsLabel">Danh sách khẩu lệnh</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Nhà thông minh bật/tắt máy lạnh</p>
+            <p>Nhà thông minh máy lạnh tự động bật/tắt</p>
+            <p>Nhà thông minh bật/tắt độ ẩm</p>
+            <p>Nhà thông minh độ ẩm tự động bật/tắt</p>
+            <p>Nhà thông minh bật/tắt đèn ngoài</p>
+            <p>Nhà thông minh đèn ngoài tự động bật/tắt</p>
+            <p>Nhà thông minh bật/tắt vòi nước</p>
+            <p>Nhà thông minh bật/tắt đèn</p>
+            <p>Nhà thông minh mở/đóng cửa</p>
+            <p>Nhà thông minh tắt báo động</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logs">
     Lịch sử thiết bị
+</button>
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#voicecmd">
+    Danh sách khẩu lệnh
 </button>
 <div class="container bg-light mt-1 mb-5 pb-5 text-center">
     <p class="output">Giọng nói:...</p>
