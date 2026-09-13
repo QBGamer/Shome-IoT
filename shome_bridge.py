@@ -9,7 +9,7 @@ mydb = mysql.connector.connect(
   host="localhost",
   user="root",
   password="",
-  database="ptudiot"
+  database="shome"
 )
 topics = [
     "Shome_DHT",
