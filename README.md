@@ -1,6 +1,6 @@
 # Shome – Smart Home IoT
 
-Hệ thống **nhà thông minh IoT**: bảng điều khiển trực tuyến để **giám sát cảm biến** và **điều khiển thiết bị bằng giọng nói tiếng Việt**. Dữ liệu truyền qua **MQTT** và được lưu lịch sử vào **MySQL/MariaDB**.
+Hệ thống **nhà thông minh IoT**: bảng điều khiển trực tuyến để **giám sát cảm biến** và **điều khiển thiết bị bằng giọng nói tiếng Việt**. Dữ liệu truyền qua **MQTT** và được lưu lịch sử vào **MySQL**.
 
 ## Tính năng
 
@@ -17,13 +17,14 @@ Hệ thống **nhà thông minh IoT**: bảng điều khiển trực tuyến đ�
 | Kết nối realtime | MQTT (Paho) — broker công cộng `broker.emqx.io` |
 | Nhận dạng giọng nói | Web Speech API (`webkitSpeechRecognition`) |
 | Backend | PHP 8 (mysqli) |
-| Cơ sở dữ liệu | MySQL / MariaDB — database `shome`, bảng `data` |
-| Cầu nối Python | `paho-mqtt`, `beautifulsoup4`, `requests`, `fake-useragent`, `mysql-connector-python` |
+| Cơ sở dữ liệu | MySQL — database `shome`, bảng `data` |
+| Kết nối Python | `paho-mqtt`, `beautifulsoup4`, `requests`, `fake-useragent`, `mysql-connector-python` |
 
 ### Sơ đồ hoạt động
 
 ```
-Cảm biến / thiết bị IoT ──MQTT──▶ broker.emqx.io ──MQTT──▶ shome_bridge.py (Python)
+Cảm biến / thiết bị IoT ◀──MQTT──▶ broker.emqx.io ◀──MQTT──▶ shome_bridge.py (Python)
+                                                                 ▲
                                                                  │
                                                                  ▼
 Trình duyệt (index.html) ◀──MQTT (WebSocket)── broker.emqx.io   MySQL `shome`
@@ -80,7 +81,7 @@ Shome/
 
 ## Yêu cầu hệ thống
 
-- **XAMPP / WAMP** (Apache + PHP 8 + MySQL/MariaDB)
+- **XAMPP / WAMP** (Apache + PHP 8 + MySQL)
 - **Python 3.8+**
 - Trình duyệt **Chrome** (cho tính năng giọng nói)
 - Kết nối Internet (broker MQTT + dự báo thời tiết)
@@ -114,7 +115,7 @@ Shome/
 
 Bấm nút **MICRO** dưới màn hình rồi nói:
 
-| Lĩnh vực | Khẩu lệnh |
+| Tính năng | Khẩu lệnh |
 |---|---|
 | Máy lạnh | "nhà thông minh bật/tắt máy lạnh" |
 | Máy lạnh tự động | "nhà thông minh máy lạnh tự động bật/tắt" |
